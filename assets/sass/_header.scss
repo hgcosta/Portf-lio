@@ -1,0 +1,36 @@
+.header-site{
+  padding: 2rem 0;
+ .content-header{
+    @include flex(row,space-between, center);
+    .brand{
+      img{
+        width: 50px;
+      }
+     a{
+      @include flex(row, start, center);
+      h1{
+        color: var(--branco-primary);
+        font-size: 2.3rem;
+        margin-left: 1rem;
+        line-height: 0;
+      }
+     }
+    }
+    .social{
+      ul{
+        @include flex(row,start, center);
+        li{
+          margin: 0 1rem;
+          a{
+            font-size: 2.5rem;
+            color: var(--branco-primary);
+            transition: all ease-in-out .5s;
+            &:hover{
+              color: var(--azul-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}

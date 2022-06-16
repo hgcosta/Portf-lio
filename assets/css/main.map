@@ -1,0 +1,34 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"../sass/main.scss",
+		"../sass/_mixins.scss",
+		"../sass/_reset.scss",
+		"../sass/_variables.scss",
+		"../sass/_grid.scss",
+		"../sass/_animate.scss",
+		"../sass/_title.scss",
+		"../sass/_components.scss",
+		"../sass/_buttons.scss",
+		"../sass/_header.scss",
+		"../sass/_footer.scss",
+		"../sass/_home.scss"
+	],
+	"sourcesContent": [
+		"@import 'mixins';\r\n@import 'reset';\r\n@import 'variables';\r\n@import 'grid';\r\n@import 'animate';\r\n@import 'title';\r\n@import 'components';\r\n@import 'buttons';\r\n@import 'header';\r\n@import 'footer';\r\n@import 'home';\r\n\r\n\r\n",
+		"@mixin flex($direction,$justify,$align){\r\n  display: flex;\r\n  flex-direction: $direction;\r\n  align-items: $align;\r\n  justify-content: $justify;\r\n}\r\n\r\n@mixin responsive($screenWidth){\r\n  @media(max-width:$screenWidth){\r\n    @content;\r\n  }\r\n}",
+		"*{\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n  text-decoration: none;\r\n  outline: none;\r\n  border: none;\r\n  box-sizing: border-box;\r\n  font-family: 'Ubuntu', sans-serif;\r\n}\r\nimg{\r\n  max-width: 100%;\r\n  display: block;\r\n}\r\nhtml{\r\n  font-size: 62.5%;\r\n}\r\nhtml, \r\nbody{\r\n  overflow-x: hidden;\r\n}\r\n\r\nbutton{\r\n  background-color: transparent;\r\n  cursor: pointer;\r\n}\r\nul{\r\n  list-style: none;\r\n  margin-bottom: 0;\r\n  padding: 0;\r\n}",
+		"\r\n:root {\r\n  --preto-primary:#1A1A1A;\r\n  --branco-secundary:#FAF8F5;\r\n  --branco-primary:#fff;\r\n  --azul-primary:#5641B8;\r\n}\r\n\r\n",
+		".container{\r\n  width: 100%;\r\n  max-width: 124.6rem;\r\n  padding: 0 15px;\r\n  margin: 0 auto;\r\n}",
+		"",
+		".title{\r\n\r\n  font-size: 78px;\r\n  font-weight: 500;\r\n  line-height: 94px;\r\n\r\n  \r\n  \r\n}\r\n.sub-tilte{\r\n\r\n  font-size: 64px;\r\n  font-weight: 700;\r\n\r\n  \r\n\r\n}\r\n\r\n\r\n",
+		"",
+		"",
+		".header-site{\r\n  padding: 2rem 0;\r\n .content-header{\r\n    @include flex(row,space-between, center);\r\n    .brand{\r\n      img{\r\n        width: 50px;\r\n      }\r\n     a{\r\n      @include flex(row, start, center);\r\n      h1{\r\n        color: var(--branco-primary);\r\n        font-size: 2.3rem;\r\n        margin-left: 1rem;\r\n        line-height: 0;\r\n      }\r\n     }\r\n    }\r\n    .social{\r\n      ul{\r\n        @include flex(row,start, center);\r\n        li{\r\n          margin: 0 1rem;\r\n          a{\r\n            font-size: 2.5rem;\r\n            color: var(--branco-primary);\r\n            transition: all ease-in-out .5s;\r\n            &:hover{\r\n              color: var(--azul-primary);\r\n            }\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+		"",
+		".hero{\r\n  background: var(--preto-primary)\r\n}"
+	],
+	"names": [],
+	"mappings": "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"
+}
